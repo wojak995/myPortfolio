@@ -21,7 +21,7 @@ body {
 
 header {
   border: #2b2b2d solid 2px;
-  width: 15rem;
+  width: 16rem;
   height: 100vh;
   position: fixed;
   background: var(--clr-bg-dark-gray);
@@ -32,10 +32,49 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
+  padding: 0.5rem;
+  overflow: hidden;
+}
+
+nav hr {
+  margin: 0px -20px 20px;
+  border: 0;
+  border-top: 1px solid var(--clr-accent-orange);
 }
 
 nav ul li {
   list-style: none;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+nav ul li:hover {
+  background: var(--clr-bg-gray);
+}
+
+nav ul li a {
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: var(--clr-accent-orange);
+  align-items: center;
+}
+
+nav ul li a .icon {
+  min-width: 4rem;
+  height: 4rem;
+  line-height: 5.5rem;
+}
+
+nav ul li a .icon ion-icon {
+  padding-left: 0.5rem;
+  font-size: 2.5rem;
+}
+
+nav ul li a .title {
+  margin-left: auto;
+  padding-right: 0.5rem;
+  margin-right: 0;
 }
 
 #person {
@@ -43,6 +82,7 @@ nav ul li {
   overflow: hidden;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 1.5rem;
 }
 #person-img {
   position: relative;

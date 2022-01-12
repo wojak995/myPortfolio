@@ -105,5 +105,5 @@ nav ul li a .title {
 main {
   position: absolute;
   width: calc(100%-16rem);
-  left: 15rem;
+  left: 16rem;
 }

@@ -3,6 +3,7 @@
   --clr-bg-gray: #464646;
   --clr-bg-light-gray: #686868;
   --clr-accent-orange: #f1a500;
+  --clr-accent-red: #f73e10;
 
   font-family: 'Open Sans';
 }
@@ -75,6 +76,10 @@ nav ul li a {
   align-items: center;
 }
 
+nav ul li a:hover {
+  color: var(--clr-accent-red);
+}
+
 nav ul li a .icon {
   min-width: 4rem;
   height: 4rem;
@@ -137,9 +142,22 @@ nav ul li a .title {
   padding-right: 0.5rem;
   padding-left: 0.5rem;
 }
-
+@media (max-width: 35rem) {
+  #media {
+    /*visibility: hidden;*/
+    display: grid;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}
 #media .icon {
   color: var(--clr-accent-orange);
+}
+
+#media .icon:hover {
+  color: var(--clr-accent-red);
 }
 
 #media .icon ion-icon {

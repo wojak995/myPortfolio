@@ -32,6 +32,13 @@ header {
   position: fixed;
   background: var(--clr-bg-dark-gray);
   color: var(--clr-accent-orange);
+  transition: 0.5s;
+}
+
+@media (max-width: 35rem) {
+  header {
+    width: 5rem;
+  }
 }
 
 nav {
@@ -75,7 +82,7 @@ nav ul li a .icon {
 }
 
 nav ul li a .icon ion-icon {
-  padding-left: 0.5rem;
+  padding-left: 1.1rem;
   font-size: 2.5rem;
 }
 
@@ -83,6 +90,15 @@ nav ul li a .title {
   margin-left: auto;
   padding-right: 0.5rem;
   margin-right: 0;
+}
+
+@media (max-width: 35rem) {
+  nav ul li a .title {
+    visibility: hidden;
+  }
+  #person-name {
+    visibility: hidden;
+  }
 }
 
 #person {
@@ -141,4 +157,11 @@ main {
   position: absolute;
   width: calc(100%-16rem);
   left: 16rem;
+}
+
+@media (max-width: 35rem) {
+  main {
+    width: calc(100%-5rem);
+    left: 5rem;
+  }
 }

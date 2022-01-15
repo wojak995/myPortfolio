@@ -8,27 +8,34 @@
 
   font-family: 'Open Sans';
 
-  --fs-h1: 2.75rem;
-  --fs-h2: 2rem;
+  --fs-h1: 2.45rem;
+  --fs-h2: 1.8rem;
 }
 
 @media (max-width: 60rem) {
   :root {
-    --fs-h1: 2rem;
-    --fs-h2: 1.5rem;
+    --fs-h1: 1.8rem;
+    --fs-h2: 1.3rem;
   }
 }
 
 @media (max-width: 50rem) {
   :root {
     --fs-h1: 1.5rem;
-    --fs-h2: 1rem;
+    --fs-h2: 1.1rem;
   }
 }
 
 @media (max-width: 45rem) {
   :root {
-    --fs-h1: 1.25rem;
+    --fs-h1: 1.35rem;
+    --fs-h2: 1rem;
+  }
+}
+
+@media (max-width: 40rem) {
+  :root {
+    --fs-h1: 1.2rem;
     --fs-h2: 0.9rem;
   }
 }
@@ -41,13 +48,13 @@
     font-size: 0.8rem;
   }
 }
-/*
-@media (max-width: 30rem) {
+
+@media (max-width: 28rem) {
   :root {
     --fs-h1: 1rem;
     --fs-h2: 0.7rem;
   }
-}*/
+}
 
 html {
   box-sizing: border-box;
@@ -267,13 +274,24 @@ main {
   position: absolute;
   top: 15%;
   left: 15%;
+  padding-right: 2rem;
 }
 @media (max-width: 38rem) {
   .center {
-    top: 5%;
-    left: 5%;
+    top: 10%;
+    left: 10%;
+    padding-right: 0.25rem;
   }
 }
+
+@media (max-width: 25rem) {
+  .center {
+    top: 5%;
+    left: 5%;
+    padding-right: 0.25rem;
+  }
+}
+
 .section-title {
 }
 

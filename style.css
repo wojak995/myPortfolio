@@ -37,6 +37,9 @@
     --fs-h1: 1.1rem;
     --fs-h2: 0.8rem;
   }
+  a {
+    font-size: 0.8rem;
+  }
 }
 /*
 @media (max-width: 30rem) {

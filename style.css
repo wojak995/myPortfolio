@@ -39,6 +39,13 @@
   }
 }
 
+@media (max-width: 30rem) {
+  :root {
+    --fs-h1: 1rem;
+    --fs-h2: 0.7rem;
+  }
+}
+
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;

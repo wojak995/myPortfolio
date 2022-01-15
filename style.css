@@ -38,13 +38,13 @@
     --fs-h2: 0.8rem;
   }
 }
-
+/*
 @media (max-width: 30rem) {
   :root {
     --fs-h1: 1rem;
     --fs-h2: 0.7rem;
   }
-}
+}*/
 
 html {
   box-sizing: border-box;
@@ -265,7 +265,12 @@ main {
   top: 15%;
   left: 15%;
 }
-
+@media (max-width: 38rem) {
+  .center {
+    top: 5%;
+    left: 5%;
+  }
+}
 .section-title {
 }
 

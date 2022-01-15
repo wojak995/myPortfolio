@@ -41,11 +41,8 @@
 }
 @media (max-width: 38rem) {
   :root {
-    --fs-h1: 1.1rem;
-    --fs-h2: 0.8rem;
-  }
-  a {
-    font-size: 0.8rem;
+    --fs-h1: 1.3rem;
+    --fs-h2: 1rem;
   }
 }
 
@@ -53,6 +50,9 @@
   :root {
     --fs-h1: 1rem;
     --fs-h2: 0.7rem;
+  }
+  a {
+    font-size: 0.8rem;
   }
 }
 

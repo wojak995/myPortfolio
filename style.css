@@ -72,9 +72,10 @@ html {
 }
 
 body {
-  height: 300vh;
+  min-height: 100vh;
   background: var(--clr-bg-light-gray);
   color: var(--clr-light);
+  overflow-x: hidden;
 }
 
 h1 {
@@ -242,7 +243,7 @@ nav ul li a .title {
 /****** MAIN CONTENT ******/
 
 main {
-  position: absolute;
+  position: relative;
   width: calc(100% - 16rem);
   left: 16rem;
 }
@@ -261,27 +262,26 @@ main p {
   font-size: 1.25rem;
 }
 
-/****** HOME ******/
-
-#home {
-  background-color: var(--clr-bg-dark-gray);
-  background-image: url(./images/img-home1.jpg);
-  background-repeat: no-repeat;
-  background-size: 100vw;
-  background-blend-mode: multiply;
-  background-attachment: fixed;
-  color: white;
-  text-align: center;
-  padding: 15vh 1rem;
-  width: 100%;
-}
-
 .section-title {
   padding-bottom: 0.5rem;
 }
 
 .section-subtitle {
   padding-bottom: 1.5rem;
+}
+
+/****** HOME ******/
+#home {
+  background-color: var(--clr-bg-dark-gray);
+  background-image: url(./images/img-home1.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vw auto;
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  color: var(--clr-light);
+  text-align: center;
+  padding: 15vh 1rem;
+  width: 100%;
 }
 
 #home-btn {
@@ -296,7 +296,6 @@ main p {
   color: var(--clr-accent-orange);
   border-color: var(--clr-accent-orange);
 }
-
 /*
 #home img {
   width: 100%;
@@ -365,6 +364,52 @@ main p {
 #about-me {
   min-height: 40vh;
   text-align: center;
+  color: var(--clr-bg-dark-gray);
   padding: 2rem;
   background-color: #703a00;
 }
+
+.grid-container {
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  grid-template-areas:
+    'one one one one one'
+    'two two three three three'
+    'four four four five five';
+}
+
+.center-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-element {
+  padding: 1rem;
+  background-color: #f1a50096;
+  border-radius: 0.5rem;
+}
+
+.grid-element:nth-child(1) {
+  grid-area: one;
+}
+
+.grid-element:nth-child(2) {
+  grid-area: two;
+}
+
+.grid-element:nth-child(3) {
+  grid-area: three;
+}
+
+.grid-element:nth-child(4) {
+  grid-area: four;
+}
+
+.grid-element:nth-child(5) {
+  grid-area: five;
+}
+
+/****** PORTFOLIO ******/

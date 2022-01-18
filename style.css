@@ -272,7 +272,7 @@ main p {
 
 /****** HOME ******/
 #home {
-  background-color: var(--clr-bg-dark-gray);
+  background-color: var(--clr-bg-gray);
   background-image: url(./images/img-home1.jpg);
   background-repeat: no-repeat;
   background-size: 100vw auto;
@@ -370,27 +370,23 @@ main p {
 
 #about-me {
   min-height: 40vh;
-  text-align: center;
   color: var(--clr-bg-dark-gray);
-  padding: 2rem;
   /*background-color: #703a00;*/
   background-color: var(--clr-light);
 }
 
 .grid-container {
   display: grid;
-  gap: 1rem;
   align-items: center;
   justify-content: center;
   grid-template-areas:
     'one one one one one'
-    'two two three three three'
-    'four four four five five';
+    'two two two three three'
+    'four four five five five';
 }
 
-@media (max-width: 38rem) {
+@media (max-width: 63rem) {
   #about-me {
-    padding: 1rem;
   }
   .grid-container {
     grid-template-areas: 'one' 'two' 'three' 'four' 'five';
@@ -407,23 +403,32 @@ main p {
   padding: 1rem;
   height: 100%;
   background-color: #f1a500ad;
-  border-radius: 0.5rem;
 }
 
 .grid-element:nth-child(1) {
   grid-area: one;
+  border-bottom: 3px solid var(--clr-accent-orange);
 }
 
 .grid-element:nth-child(2) {
   grid-area: two;
+  border-right: 3px solid var(--clr-accent-orange);
+  border-bottom: 3px solid var(--clr-accent-orange);
 }
 
 .grid-element:nth-child(3) {
   grid-area: three;
+  background: url(./images/img-about-me.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 30vw;
+  min-height: 300px;
+  border-bottom: 3px solid var(--clr-accent-orange);
 }
 
 .grid-element:nth-child(4) {
   grid-area: four;
+  border-right: 3px solid var(--clr-accent-orange);
 }
 
 .grid-element:nth-child(5) {
@@ -437,4 +442,32 @@ main p {
   flex-direction: column;
   gap: 1rem;
   padding: 2rem;
+}
+
+/***** FOOTER *****/
+
+footer {
+  background: var(--clr-bg-gray);
+  position: relative;
+  width: calc(100% - 16rem);
+  left: 16rem;
+}
+
+@media (max-width: 38rem) {
+  footer {
+    width: calc(100% - 5rem);
+    left: 5rem;
+  }
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.flex a {
+  color: #f1a500;
+  padding-left: 2rem;
+  font-size: 1.25rem;
 }

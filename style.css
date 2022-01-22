@@ -1,5 +1,6 @@
 :root {
-  --clr-bg-black: #000000;
+  --clr-black: #000000;
+  --clr-bg-footer: #202020;
   --clr-bg-dark-gray: #2b2b2d;
   --clr-bg-gray: #464646;
   --clr-bg-light-gray: #686868;
@@ -376,9 +377,13 @@ main p {
 
 #about-me {
   min-height: 40vh;
-  color: var(--clr-bg-black);
+  color: var(--clr-black);
   /*background-color: #703a00;*/
   /*background-color: var(--clr-light);*/
+}
+
+#about-me .section-title {
+  padding-bottom: 0;
 }
 
 .grid-container {
@@ -395,7 +400,7 @@ main p {
   #about-me {
   }
   .grid-container {
-    grid-template-areas: 'one' 'two' 'three' 'four' 'five';
+    grid-template-areas: 'one' 'two' 'three' 'five' 'four';
   }
 }
 
@@ -458,25 +463,60 @@ main p {
 }
 
 @media (max-width: 63rem) {
-  .grid-element:nth-child(2),
-  .grid-element:nth-child(4) {
-    border-right: none;
+  .grid-element:nth-child(3),
+  .grid-element:nth-child(5) {
+    border-left: var(--border-width) solid var(--clr-accent-orange);
+    border-left: var(--border-width) solid var(--clr-accent-orange);
   }
 }
 
 /****** PORTFOLIO ******/
 
 #portfolio {
+  background-color: var(--clr-bg-dark-gray);
+  border: var(--border-width) solid var(--clr-accent-orange);
+}
+.flex-container {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  padding: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+.flex-center {
+  width: fit-content;
+}
+
+#portfolio .section-title {
+  padding: 1rem;
+}
+
+.portfolio-content {
+  display: flex;
+  border-top: var(--border-width) solid var(--clr-accent-orange);
+}
+
+.portfolio-content .flex-item {
+  padding: 1rem;
+  flex-basis: 100%;
+}
+.portfolio-content .flex-item ~ .flex-item {
+  border-left: var(--border-width) solid var(--clr-accent-orange);
+}
+
+@media (max-width: 63rem) {
+  .portfolio-content {
+    flex-wrap: wrap;
+  }
+  .portfolio-content .flex-item ~ .flex-item {
+    border-left: none;
+    border-top: var(--border-width) solid var(--clr-accent-orange);
+  }
 }
 
 /***** FOOTER *****/
 
 footer {
-  background: var(--clr-bg-gray);
+  background: var(--clr-bg-footer);
   position: relative;
   width: calc(100% - 16rem);
   left: 16rem;

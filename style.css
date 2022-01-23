@@ -497,7 +497,7 @@ main p {
 .portfolio-content .flex-item {
   position: relative;
   flex-basis: 100%;
-  min-height: 45vh;
+  min-height: 55vh;
 }
 .portfolio-content .flex-item ~ .flex-item {
   border-left: var(--border-width) solid var(--clr-accent-orange);
@@ -548,8 +548,20 @@ main p {
   opacity: 1;
 }
 
-.card p {
+.card .content {
   padding: 1rem;
+}
+
+.card .content h2 {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.card .content a {
+  text-decoration: none;
+  color: var(--clr-light);
+  font-weight: 700;
 }
 
 @media (max-width: 38rem) {
@@ -558,6 +570,13 @@ main p {
   }
   .card {
     opacity: 1;
+  }
+}
+
+@media (min-width: 70rem) {
+  .card .content p ~ p {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 }
 

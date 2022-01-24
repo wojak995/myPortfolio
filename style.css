@@ -564,6 +564,10 @@ main p {
   font-weight: 700;
 }
 
+.card .content a:hover {
+  color: var(--clr-accent-red);
+}
+
 @media (max-width: 38rem) {
   .portfolio-content .flex-item img {
     filter: blur(4px);
